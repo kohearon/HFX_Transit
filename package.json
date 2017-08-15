@@ -1,0 +1,19 @@
+{
+  "name": "HFX_Transit",
+  "version": "1.0.0",
+  "description": "Transit App For Halifax Nova Scotia Canada.",
+  "main": "index.js",
+  "author": "KGSM",
+  "license": "MIT",
+  "devDependencies": {
+    "browserify": "^14.4.0",
+    "gulp": "^3.9.1",
+    "gulp-uglify": "^3.0.0",
+    "gulp-util": "^3.0.8",
+    "vinyl-source-stream": "^1.1.0"
+  },
+  "dependencies": {
+    "express": "^4.15.4",
+    "react": "^15.6.1"
+  }
+}
