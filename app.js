@@ -13,16 +13,25 @@ app.get('/all-vehicles', function (req, res) {
   };
 
   request(requestSettings, function (error, response, body) {
+
+    /* Getting Data From Open Data Halifax */
     if (!error && response.statusCode == 200) {
       var feed = GtfsRealtimeBindings.FeedMessage.decode(body);
-      feed.entity.map( entity => {
-        return {
-          'lat': entity.vehicle.position.latitude,
-          'lon': entity.vehicle.longitude,
-        }
-      })
-      res.send(feed);
+       res.send(
+         feed.entity.map( entity => {
+          return {
+            'lat': entity.vehicle.position.latitude,
+            'lon': entity.vehicle.position.longitude,
+          }
+        })
+      )
     }
+
+    /* Error Getting Data */
+    else {
+      res.status(500).send('Could Not Fetch Realtime Data')
+    }
+
   });
 })
 
