@@ -6,7 +6,7 @@
   "author": "KGSM",
   "license": "MIT",
   "scripts": {
-    "test" : "node ./node_modules/mocha/bin/mocha --recursive"
+    "test": "node ./node_modules/mocha/bin/mocha --recursive"
   },
   "devDependencies": {
     "browserify": "^14.4.0",
@@ -17,7 +17,10 @@
     "vinyl-source-stream": "^1.1.0"
   },
   "dependencies": {
+    "axios": "^0.16.2",
     "express": "^4.15.4",
-    "react": "^15.6.1"
+    "gtfs-realtime-bindings": "^0.0.4",
+    "react": "^15.6.1",
+    "request": "^2.81.0"
   }
 }

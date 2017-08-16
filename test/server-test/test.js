@@ -7,10 +7,6 @@ describe('GET /all-vehicles', function(){
     request(app)
       .get('/all-vehicles')
       .expect(200, done) // note that we're passing the done as parameter to the expect
-      .end(function(err, res) {
-        if (err) return done(err)
-        done();
-      });
   });
 
   it('Should Return JSON', function(done) {
