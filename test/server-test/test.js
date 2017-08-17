@@ -20,9 +20,25 @@ describe('GET /all-vehicles', function(){
     request(app)
       .get('/all-vehicles')
       .then( res => {
-        expect(res.body[0].lat).to.not.equal(null)
-        expect(res.body[0].lon).to.not.equal(null)
+        expect(res.body[0].lat).to.not.equal(undefined)
+        expect(res.body[0].lon).to.not.equal(undefined)
       })
       .then(done)
+      .catch( err => {
+        return done(err);
+      })
   })
+
+  it('Each Trip Should Have A Route ID', function(done) {
+    request(app)
+      .get('/all-vehicles')
+      .then( res => {
+        expect(res.body[0].tripID).to.not.equal(undefined)
+      })
+      .then(done)
+      .catch( err => {
+        return done(err);
+      })
+  })
+
 });
