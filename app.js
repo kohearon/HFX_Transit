@@ -20,6 +20,7 @@ app.get('/all-vehicles', function (req, res) {
        res.send(
          feed.entity.map( entity => {
           return {
+            'tripID': entity.vehicle.trip.trip_id,
             'lat': entity.vehicle.position.latitude,
             'lon': entity.vehicle.position.longitude,
           }
