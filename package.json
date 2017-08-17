@@ -5,15 +5,23 @@
   "main": "index.js",
   "author": "KGSM",
   "license": "MIT",
+  "scripts": {
+    "test": "node ./node_modules/mocha/bin/mocha --recursive --timeout 10000"
+  },
   "devDependencies": {
     "browserify": "^14.4.0",
+    "chai": "^4.1.1",
     "gulp": "^3.9.1",
     "gulp-uglify": "^3.0.0",
     "gulp-util": "^3.0.8",
+    "mocha": "^3.5.0",
     "vinyl-source-stream": "^1.1.0"
   },
   "dependencies": {
+    "axios": "^0.16.2",
     "express": "^4.15.4",
-    "react": "^15.6.1"
+    "gtfs-realtime-bindings": "^0.0.4",
+    "react": "^15.6.1",
+    "request": "^2.81.0"
   }
 }
