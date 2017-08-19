@@ -7,8 +7,8 @@ export default class Map extends Component {
 
     const GettingStartedGoogleMap = withGoogleMap(props => (
       <GoogleMap
-        defaultZoom={3}
-        defaultCenter={{ lat: -25.363882, lng: 131.044922 }}
+      defaultZoom={14}
+      defaultCenter={{ lat: 44.651070 , lng: 	-63.582687}}
       >
       </GoogleMap>
     ));
