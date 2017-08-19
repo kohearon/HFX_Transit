@@ -19,3 +19,8 @@ gulp.task('scripts', function(){
     .on("error", gutil.log)
     .pipe(gulp.dest('dist/'))
 });
+
+
+gulp.task('default', ['scripts'], function() {
+  gulp.watch('Components/*.jsx', ['scripts'])
+})
