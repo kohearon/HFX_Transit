@@ -8,12 +8,12 @@ var uglify = require('gulp-uglify');
 
 gulp.task('scripts', function(){
   var b = browserify({
-    entries: 'index.jsx',
+    entries: 'index.js',
   });
 
   return b.transform("babelify", {presets: ["es2015", "react"]})
     .bundle()
-    .pipe(source('index.jsx'))
+    .pipe(source('index.js'))
     .pipe(buffer())
     .pipe(uglify())
     .on("error", gutil.log)
